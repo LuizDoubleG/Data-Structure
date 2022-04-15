@@ -26,16 +26,19 @@ void printArray(int *array, int size){
     }
     printf("\n");
 }
-
+void swap(int* array, int i, int j){
+    int temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+}
 void bubblesort(int* array, int size, int* flag){
     int i, j, temp;
     for(i = 0; i < size - 1; i++){
         for(j = size - 1; j > i ; j--){
+            *flag = *flag + 1;
             if(array[j] < array[j - 1]){
-                temp = array[j];
-                array[j] = array[j - 1];
-                array[j - 1] = temp;
-                *flag += 3;
+                swap(array, j, j - 1);
+                *flag = *flag + 3;
                 //flag = 0;
             }
         }
