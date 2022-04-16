@@ -52,6 +52,7 @@ void insertionSort(int* array, int size, int* flag){
 
 int main (void){
     int size, flag = 0, option;
+    time_t tStrt, tEnd; // Variables to measure the time
 
     printf("Enter the number of elements: ");
     scanf("%d", &size);
@@ -70,11 +71,17 @@ int main (void){
     printf("Input array: ");
     printArray(array, size);
 
+    tStrt = clock(); // Start the clock
     insertionSort(array, size, &flag);
+    tEnd = clock(); // Stop the clock
 
     printf("Sorted array: ");
     printArray(array, size);
 
     printf("\nOperations count: %d\n", flag);
+    
+    printf("\nTime in seconds: %f sec\n\n", (double)(tEnd - tStrt) / CLOCKS_PER_SEC );
+
+    return 0;
 }
 

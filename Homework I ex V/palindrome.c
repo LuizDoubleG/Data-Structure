@@ -25,7 +25,7 @@ void verify_palindrome(char* str, int* flag){
     int i, j, len;
     len = strlen(str);
     j = len - 1;
-    for(i = 0; i < len; i++){
+    for(i = 0; i <= j; i++){ // Indexes walk until they meet, they don't have to go all the way
         if(str[i] != str[j]){
             *flag = 1;
             break;

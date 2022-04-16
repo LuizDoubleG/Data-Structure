@@ -5,10 +5,12 @@
 int main() {
 	float area, volume;
 	Cylinder *c;
-	c = Cylinder_create(4,8);
+	printf("Enter the ray and the height of the cylinder: ");
+	scanf("%f %f", &area, &volume);
+	c = Cylinder_create(area, volume);
 	area = Cylinder_area(c);
 	volume = Cylinder_volume(c);
-	printf("Area desse cilindro: %f\n", area);
-	printf("Volume desse cilindro: %f\n", volume);
+	printf("Cylinder area: %f\n", area);
+	printf("Cylinder volume: %f\n", volume);
 	return 0;
 }
