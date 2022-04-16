@@ -1,7 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+//#include <locale.h> 
 
+
+// void remove_spaces(char* str) {
+//     int i, j;
+//     for (i = 0, j = 0; str[i] != '\0'; i++) {
+//         if (str[i] != ' ') {
+//             str[j++] = str[i];
+//         }
+//     }
+// }
 void lowercase(char* str) {
     int i;
     for (i = 0; str[i] != '\0'; i++) {
@@ -35,9 +45,11 @@ void verify_palindrome(char* str, int* flag){
 }
 
 int main (void){
+    //setlocale (LC_ALL, "Portuguese");
     FILE* fp;
     char str[100], original[100];
-    int flag = 0;
+    //char* str;
+    int flag = 0, len;
 
     fp = fopen("palindrome.txt", "r");
     if (fp == NULL){
@@ -46,13 +58,16 @@ int main (void){
     }
 
     while (!feof(fp)){
+    	//str = (char*) malloc(100 * sizeof(char));
         flag = 0;
-
+        //fgets(str, 100, fp);
         fscanf(fp, "%100[^\n]%*c", str);
         strcpy(original, str);
 
         lowercase(str);
         remove_spaces(str);
+      
+        //   strcat(str,aux);
 
         verify_palindrome(str, &flag);
         
