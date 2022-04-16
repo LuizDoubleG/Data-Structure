@@ -1,19 +1,19 @@
 typedef struct cylinder Cylinder;
 
 Cylinder* Cylinder_create (float ray, float h);
-//Cria um novo cilindro baseado em raio e altura
+//Creates a new cylinder with the given ray and height
 
 void Cylinder_free(Cylinder* c);
-//Libera o espaço alocado para o cilindro
+//Frees the memory used by the cylinder
 
 //float Cylinder_acess(Cylinder* c, float ray, float h);
-//Acessa(retorna) o raio e a altura de um cilindro
+//Access the ray or height of a cylinder
 
 //float Cylinder_assign(Cylinder* c, float ray, float h);
-//Atribui novos valores ao raio e à altura de um cilindro
+//Assign new ray or height to a cylinder
 
 float Cylinder_area(Cylinder* c);
-//Calcula a área de um cilindro
+//Calculates the area of a cylinder
 
 float Cylinder_volume(Cylinder* c);
-//Calcula o volume de um cilindro
+//Calculates the volume of a cylinder
