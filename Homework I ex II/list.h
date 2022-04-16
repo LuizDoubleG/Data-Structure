@@ -7,3 +7,13 @@ StudentList* createList (void){
 	}
 	return List;
 }
+
+void free_Lst(StudentList* Lst){
+	StudentDatas* ptrStudentData;
+	while(Lst->firstStudentData != NULL){
+		ptrStudentData = Lst->firstStudentData;
+		Lst->firstStudentData = Lst->firstStudentData->nextStudent;
+		free(ptrStudentData);
+	}
+	free(Lst);
+}

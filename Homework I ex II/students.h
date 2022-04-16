@@ -6,6 +6,9 @@
 StudentList* createList (void);
 //Cria uma lista que contem os dados dos estudantes
 
+void free_Lst(StudentList* Lst);
+//Libera a memoria alocada para a lista e seus nós
+
 void StudentDataListCreate (char* fileName, StudentList* Lst);
 //Le os dados dos estudantes do ficheiro e os coloca na lista
 

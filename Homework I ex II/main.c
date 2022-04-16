@@ -8,6 +8,6 @@ int main() {
 	Lst = createList();
 	StudentDataListCreate ("studentsCRE.txt",Lst);
 	StudentListPrint(Lst);
-	free(Lst);
+	free_Lst(Lst); 
 }
  
