@@ -4,7 +4,8 @@
 #include "stacksADT.h"
 #include "baseConverter.h" //Contains the function prototypes for the cylinder functions and struct definitions
 #define MAX_LENGTH 10000
-
+#define ERR_INVALID_NUMBER "The number must be positive. Please type another number.\n"
+#define ERR_INVALID_BASE "The base must be positive. Please type another number.\n"
 
 //Asks a decimal number from the user until it is valid
 void getNumber(int* number){
@@ -12,7 +13,7 @@ void getNumber(int* number){
     printf("Enter the decimal: ");
     scanf("%d", number);
     if (*number < 0){
-        printf("The number must be positive. Please type another number.\n");
+        printf(ERR_INVALID_NUMBER);
     }// if
     }while(*number < 0); // do while
 } // getNumber
@@ -22,10 +23,10 @@ void getBase(int* base){
     do{
     printf("Enter the base: ");
     scanf("%d", base);
-    if (*base < 0){
-        printf("The base must be positive. Please type another number.\n");
+    if (*base <= 0){
+        printf(ERR_INVALID_BASE);
     }// if
-    }while(*base < 0); // do while
+    }while(*base <= 0); // do while
 } // getBase
 
 //Converts a decimal number to another number base
