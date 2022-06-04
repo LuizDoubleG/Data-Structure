@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <math.h>
-#include "Cylinder.h" //inclui struct do cilindro e protótipo das funções
+#include "Cylinder.h" //Contains the function prototypes for the cylinder functions and struct definitions
 #define PI 3.14
 
 struct cylinder{

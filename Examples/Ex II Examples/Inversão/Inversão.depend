@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1650302156 source:h:\2022-1\aulas\estrutura de dados i_2022\programas\teste_pilhas\inversão\stacksadt.c
+	<stdio.h>
+	<stdlib.h>
+	"stacksADT.h"
+
+1650302264 h:\2022-1\aulas\estrutura de dados i_2022\programas\teste_pilhas\inversão\stacksadt.h
+	<stdbool.h>
+

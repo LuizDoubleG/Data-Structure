@@ -1,0 +1,4 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "stacksADT.h"int main (void){//	Local Definitions	int  done = false;	int* dataPtr ;	STACK* stack ;//	Statements	// Create a stack and allocate memory for data	stack = createStack ();	// Fill stack	while (!done)	   {	    dataPtr = (int*) malloc (sizeof(int));	    printf ("Enter a number: <EOF> to stop: ");	    if ((scanf ("%d" , dataPtr)) == EOF	           || fullStack (stack))	       done = true;	    else	       pushStack (stack, dataPtr);	   } // while//	Now print numbers in reverse	printf ("\n\nThe list of numbers reversed:\n");	while (!emptyStack (stack))	   {	    dataPtr = (int*)popStack (stack);	    printf ("%3d\n", *dataPtr);	    free (dataPtr);	   } // while//	Destroying Stack	destroyStack (stack);	return 0;
+}
