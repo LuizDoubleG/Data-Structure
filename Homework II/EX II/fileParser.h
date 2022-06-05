@@ -1,0 +1,6 @@
+#ifndef FILEPARSER_H_INCLUDED
+#define FILEPARSER_H_INCLUDED
+
+void parseFile(FILE* fPtr);
+
+#endif // FILEPARSER_H_INCLUDED
