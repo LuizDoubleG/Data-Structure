@@ -1,0 +1,6 @@
+#ifndef WORDCLASSIFIER_H_INCLUDED
+#define WORDCLASSIFIER_H_INCLUDED
+
+void wordClassifier(FILE* fPtr);
+
+#endif // WORDCLASSIFIER_H_INCLUDED

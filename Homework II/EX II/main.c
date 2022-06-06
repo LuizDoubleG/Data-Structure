@@ -1,4 +1,4 @@
-/*	this program parses lines to checks the match of Square Bracket {}, Curly Brackets [] and Parentheses () in text files.
+/*	This program parses lines to checks the match of Square Bracket {}, Curly Brackets [] and Parentheses () in text files.
 	    Written by: LuizDoubleG
 	    Date: 04/06/2022
 */
