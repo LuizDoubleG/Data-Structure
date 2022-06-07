@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1651687244 source:h:\2022-1\aulas\estrutura de dados i_2022\programas\teste_listas\filmes\linklistadt.c
+	<stdio.h>
+	<stdlib.h>
+	"linkListADT.h"
+
+1651687386 h:\2022-1\aulas\estrutura de dados i_2022\programas\teste_listas\filmes\linklistadt.h
+	<stdbool.h>
+
+1651689044 source:h:\2022-1\aulas\estrutura de dados i_2022\programas\teste_listas\filmes\main.c
+	<stdio.h>
+	<stdlib.h>
+	<cType.h>
+	<stdbool.h>
+	"linkListADT.h"
+
