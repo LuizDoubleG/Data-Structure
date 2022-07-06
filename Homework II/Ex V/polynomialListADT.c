@@ -33,6 +33,9 @@ int compare(void* m1, void* m2, int flag)
         ((Monomial*)m2)->coefficient +=((Monomial*)m1)->coefficient;
             return 0;
     } // else if
+    else if (((Monomial*)m1)->coefficient == ((Monomial*)m2)->coefficient == 0){
+            return 0;
+    } // else if
     else {
         return -1;
     } // else
@@ -44,7 +47,7 @@ void remove0CoefficientsMonomials(LIST* polynomial)
     int i = 0;
     Monomial *monomial;
 // Statements
-    while (traverse(polynomial, i, (void *)&monomial)){
+    while (traverse(polynomial, i, (void **)&monomial)){
         if (monomial->coefficient == 0){
             removeNode(polynomial, monomial, NULL);
         } // if
@@ -73,13 +76,20 @@ void printList(LIST *polynomial)
             } // else
         } // if
 
-        if (monomial->exponent == 0)
+        if (monomial->coefficient != 0)
         {
-            printf("%d", monomial->coefficient);
+            if (monomial->exponent == 0)
+            {
+                printf("%d", monomial->coefficient);
+            } // if
+            else{
+            printf("%ix^%i", monomial->coefficient, monomial->exponent);
+            } // else
         } // if
-        else{
-        printf("%ix^%i", monomial->coefficient, monomial->exponent);
-        } // else
+        else if (listCount(polynomial) == 1)
+        {
+            printf("0");
+        } // else if
         i++;
     } // while
     printf("\n");
@@ -208,13 +218,13 @@ void readPolynomialString(char* polynomialString, LIST *polynomial)
         if (negativeFlag == 1){
             exponent = -exponent;
         } // if
-     
-        negativeFlag = 0;
 
         monomial = create_monomial(coefficient, exponent);
         if (monomial != NULL){
             addNode(polynomial, monomial);
         } // if
+
+        negativeFlag = 0;
 
         i++;
     } // while

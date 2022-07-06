@@ -68,7 +68,7 @@ int addNode (LIST* pList, void* dataInPtr)
 	   // dataInPtr is null, so return error
 	   return (-2);
 	found = _search (pList, &pPre, &pLoc, dataInPtr);
-	remove0CoefficientsMonomials(pList);
+	//remove0CoefficientsMonomials(pList);
 	if (found)
 	   // Duplicate expoentes sum the coeficients and not add new node 
 	   return (+1);
